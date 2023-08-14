@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speaker Submission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="speaker-from-header">
+        <h1>Speaker Submission</h1>
+        <p>Want to speak at out fake conference?<br>Fill out this form.</p>
+    </header>
+    <form action="" method="get" class="speaker-form">
+        <div class="form-row">
+            <label for="full-name">Name</label>
+            <input type="text" name="full-name" id="full-name">
+        </div>
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="you@example.com">
+        </div>
+        <div class="form-row">
+            <fieldset class="legacy-form-row">
+                <legend>Type of Talk</legend>
+                <input type="radio" name="talk-type" id="talk-type1" value="main-stage">
+                <label for="talk-type1" class="radio-label">Main Stage</label>
+                <input type="radio" name="talk-type" id="talk-type2" value="workshop" checked>
+                <label for="talk-type2" class="radio-label">Workshop</label>
+            </fieldset>
+        </div>
+        <div class="form-row">
+            <label for="t-shirt">T-Shirt Size</label>
+            <select name="t-shirt" id="t-shirt">
+                <option value="xs">Extra Small</option>
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>
