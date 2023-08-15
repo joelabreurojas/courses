@@ -1,0 +1,3197 @@
+freeCodeCamp HTML&CSS:
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>CatPhotoApp</title>
+    <meta charset="UTF-8"></meta>
+  </head>
+  <body>
+    <h1>CatPhotoApp</h1>
+    <main>
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="menu">
+      <header>
+        <h1>CAMPER CAFE</h1>
+        <p class="established">Est. 2020</p>
+      </header>
+      <hr>
+      <main>
+        <section>
+          <h2>Coffee</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
+          <article class="item">
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+        <section>
+          <h2>Desserts</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+          <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          </article>
+        </section>
+      </main>
+      <hr class="bottom-line">
+      <footer>
+        <p>
+          <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+        </p>
+        <p class="address">123 Free Code Camp Drive</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+}
+
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Markers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>CSS Color Markers</h1>
+    <div class="container">
+      <div class="marker red">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+      <div class="marker green">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+      <div class="marker blue">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
+
+.cap {
+  width: 60px;
+  height: 25px;
+}
+
+.sleeve {
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+.cap, .sleeve {
+  display: inline-block;
+}
+
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+	  <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
+        <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
+        <label>Enter Your Email: <input type="email" name="email" required /></label>
+        <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
+        <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+			  </label>
+      </fieldset>
+      <fieldset>
+        <label>Upload a profile picture: <input type="file" name="file" /></label>
+        <label>Input your age (years): <input type="number" name="age" min="13" max="120" />
+			  </label>
+        <label>How did you hear about us?
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label>Provide a bio:
+          <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+			  </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+	color: #f5f6f7;
+  font-family: Tahoma;
+	font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+	max-width: 500px;
+	min-width: 300px;
+	margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+	margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+	width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+a {
+  color: #dfdfe2;
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rothko Painting</title>
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="frame">
+      <div class="canvas">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  overflow: hidden;
+  filter: blur(2px);
+}
+
+.frame {
+  border: 50px solid black;
+  width: 500px;
+  padding: 50px;
+  margin: 20px auto;
+}
+
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762;
+  border-radius: 9px;
+  transform: rotate(-0.6deg);
+}
+
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg);
+}
+
+.one, .two {
+  filter: blur(1px);
+}
+
+.three {
+  width: 91%;
+  height: 28%;
+  background-color: #b20403;
+  margin: auto;
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 30px 25px 60px 12px;
+  transform: rotate(-0.2deg);
+}
+
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>CSS FLEXBOX PHOTO GALLERY</h1>
+    </div>
+    <div id="gallery">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg"/>
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/10.jpg"/>
+    </div>
+  </body>
+</html>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #EBE7E7;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+  background: #E0DDDD;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+}
+
+#gallery img {
+  width: 25%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 8px;
+  padding: 0 4px;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  #gallery img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  #gallery img {
+    width: 100%;
+  }
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nutrition Label</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="label">
+      <header>
+        <h1 class="bold">Nutrition Facts</h1>
+        <div class="divider"></div>
+        <p>8 servings per container</p>
+        <p class="bold">Serving size <span class="right">2/3 cup (55g)</span></p>
+      </header>
+      <div class="divider lg"></div>
+      <div class="calories-info">
+        <p class="bold sm-text">Amount per serving</p>
+        <h1>Calories <span class="right">230</span></h1>
+      </div>
+      <div class="divider md"></div>
+      <div class="daily-value sm-text">
+        <p class="right bold no-divider">% Daily Value *</p>
+        <div class="divider"></div>
+        <p><span class="bold">Total Fat</span> 8g <span class="bold right">10%</span></p>
+        <p class="indent no-divider">Saturated Fat 1g <span class="bold right">5%</span></p>
+        <div class="divider"></div>
+        <p class="indent no-divider"><i>Trans</i> Fat 0g</p>
+        <div class="divider"></div>
+        <p><span class="bold">Cholesterol</span> 0mg <span class="right bold">0%</span></p>
+        <p><span class="bold">Sodium</span> 160mg <span class="right bold">7%</span></p>
+        <p><span class="bold">Total Carbohydrate</span> 37g <span class="right bold">13%</span></p>
+        <p class="indent no-divider">Dietary Fiber 4g</p>
+        <div class="divider"></div>
+        <p class="indent no-divider">Total Sugars 12g</p>
+        <div class="divider dbl-indent"></div>
+        <p class="dbl-indent no-divider">Includes 10g Added Sugars <span class="right bold">20%</span>
+        <div class="divider"></div>
+        <p class="no-divider"><span class="bold">Protein</span> 3g</p>
+        <div class="divider lg"></div>
+        <p>Vitamin D 2mcg <span class="right">10%</span></p>
+        <p>Calcium 260mg <span class="right">20%</span></p>
+        <p>Iron 8mg <span class="right">45%</span></p>
+        <p class="no-divider">Potassium 235mg <span class="right">6%</span></p>
+      </div>
+      <div class="divider md"></div>
+      <p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
+    </div>
+  </body>
+</html>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px
+}
+
+p {
+  margin: 0;
+}
+
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+  clear: right;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.right {
+  float: right;
+}
+
+.lg {
+  height: 10px;
+}
+
+.lg, .md {
+  background-color: black;
+  border: 0;
+}
+
+.md {
+  height: 5px;
+}
+
+.sm-text {
+  font-size: 0.85rem;
+}
+
+.calories-info h1 {
+  margin: -5px -2px;
+  overflow: hidden;
+}
+
+.calories-info span {
+  font-size: 1.2em;
+  margin-top: -7px;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.dbl-indent {
+  margin-left: 2em;
+}
+
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info" accesskey="1">INFO</a></li>
+          <li><a href="#html-questions" accesskey="2">HTML</a></li>
+          <li><a href="#css-questions" accesskey="3">CSS</a></li>
+			  </ul>
+      </nav>
+    </header>
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                The legend element represents a caption for the content of its
+                parent fieldset element
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1" name="q1" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" id="q1-a2" name="q1" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                A label element nesting an input element is required to have a
+                for attribute with the same value as the input's id
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" name="q2" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" name="q2" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="customer">Are you a frontend developer?</label>
+            </div>
+            <div class="answer">
+              <select name="customer" id="customer" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-questions">Do you have any questions:</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-questions" name="css-questions" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
+  </body>
+</html>
+
+---
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #f5f6f7;
+	color: #1b1b32;
+	font-family: Helvetica;
+	margin: 0;
+}
+
+header {
+  width: 100%;
+	height: 50px;
+	background-color: #1b1b32;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+#logo {
+  width: max(100px, 18vw);
+	background-color: #0a0a23;
+  aspect-ratio: 35 / 4;
+	padding: 0.4rem;
+}
+
+h1 {
+  color: #f1be32;
+	font-size: min(5vw, 1.2em);
+  text-align: center;
+}
+
+nav {
+  width: 50%;
+	max-width: 300px;
+	height: 50px;
+}
+
+nav > ul {
+  display: flex;
+	justify-content: space-evenly;
+  flex-wrap: wrap;
+	align-items: center;
+	padding-inline-start: 0;
+	margin-block: 0;
+	height: 100%;
+}
+
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+	padding: 0.2rem;
+	display: block;
+}
+
+nav > ul > li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 50px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+}
+
+h1,
+h2 {
+  font-family: Verdana, Tahoma;
+}
+
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+  margin-top: 0px;
+  padding-top: 60px;
+}
+
+.info {
+  padding: 10px 0 0 5px;
+}
+
+.formrow {
+  margin-top: 30px;
+	padding: 0px 15px;
+}
+
+input {
+  font-size: 16px;
+}
+
+.info label, .info input {
+  display: inline-block;
+  text-align: right;
+}
+
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+}
+
+.question-block {
+  text-align: left;
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	padding-top: 5px;
+}
+
+p {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+p::before {
+  content: "Question #";
+}
+
+.question {
+  border: none;
+  padding-bottom: 0;
+}
+
+.answers-list {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+	display: block;
+	margin: 40px auto;
+	width: 40%;
+	padding: 15px;
+	font-size: 23px;
+	background: #d0d0d5;
+	border: 3px solid #3b3b4f;
+}
+
+footer {
+	background-color: #2a2a40;
+	display: flex;
+	justify-content: center;
+}
+
+footer,
+footer a {
+  color: #dfdfe2;
+}
+
+address {
+  text-align: center;
+  padding: 0.3em;
+}
+
+.sr-only {
+  position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Norman Borlaug</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main">
+      <header>
+        <h1 id="title">Dr. Norman Borlaug</h1>
+        <p>The man who saved a billion lives</p>
+        <figure id="img-div">
+          <img id="image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg" alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists"></img>
+          <figcaption id="img-caption">
+            Dr. Norman Borlaug, third from the left, trains biologists in
+            Mexico on how to increase wheat yields - part of his life-long 
+            war on hunger.
+          </figcaption>
+        </figure>
+      </header>
+      <section id="tribute-info">
+        <h3><b>Here's a time line of Dr. Borlaug's life:</b></h3>
+        <ul>
+          <li>
+            <b>1914</b>
+             Born in Cresco, Iowa
+          </li>
+          <li>
+            <b>1933</b>
+             Leaves his family's farm to attend the University of 
+             Minnesota, thanks to a Depression era program known as the 
+             "National Youth Administration"
+          </li>
+          <li>
+            <b>1935</b>
+             Has to stop school and save up more money. Works in the 
+             Civilian Conservation Corps, helping starving Americans. "I 
+             saw how food changed them", he said. "All of this left scars 
+             on me."
+          </li>
+          <li>
+            <b>1937</b>
+             Finishes university and takes a job in the US Forestry     
+             Service
+          </li>
+          <li>
+            <b>1938</b>
+             Marries wife of 69 years Margret Gibson. Gets laid off due 
+             to budget cuts. Inspired by Elvin Charles Stakman, he returns 
+             to school study under Stakman, who teaches him about breeding 
+             pest-resistent plants.
+          </li>
+          <li>
+            <b>1941</b>
+             Tries to enroll in the military after the Pearl Harbor 
+             attack, but is rejected. Instead, the military asked his lab 
+             to work on waterproof glue, DDT to control malaria, 
+             disinfectants, and other applied science.
+          </li>
+          <li>
+            <b>1942</b>
+             Receives a Ph.D. in Genetics and Plant Pathology
+          </li>
+          <li>
+            <b>1944</b>
+             Rejects a 100% salary increase from Dupont, leaves behind 
+             his pregnant wife, and flies to Mexico to head a new plant 
+             pathology program. Over the next 16 years, his team breeds 6,
+             000 different strains of disease resistent wheat - including 
+             different varieties for each major climate on Earth.
+          </li>
+          <li>
+            <b>1945</b>
+             Discovers a way to grown wheat twice each season, doubling 
+             wheat yields
+          </li>
+          <li>
+            <b>1953</b>
+             crosses a short, sturdy dwarf breed of wheat with a 
+             high-yeidling American breed, creating a strain that responds 
+             well to fertilizer. It goes on to provide 95% of Mexico's 
+             wheat.
+          </li>
+          <li>
+            <b>1962</b>
+             Visits Delhi and brings his high-yielding strains of wheat to 
+             the Indian subcontinent in time to help mitigate mass 
+             starvation due to a rapidly expanding population
+          </li>
+          <li>
+            <b>1970</b>
+             receives the Nobel Peace Prize
+          </li>
+          <li>
+            <b>1983</b>
+             helps seven African countries dramatically increase their 
+             maize and sorghum yields
+          </li>
+          <li>
+            <b>1984</b>
+             becomes a distinguished professor at Texas A&M University
+          </li>
+          <li>
+            <b>2005</b>
+             states "we will have to double the world food supply by 2050.
+             " Argues that genetically modified crops are the only way we 
+             can meet the demand, as we run out of arable land. Says that 
+             GM crops are not inherently dangerous because "we've been 
+             genetically modifying plants and animals for a long time. 
+             Long before we called it science, people were selecting the 
+             best breeds."
+          </li>
+          <li>
+            <b>2009</b>
+             dies at the age of 95.
+          </li>
+        </ul>
+        <p><i>"Borlaug's life and achievement are testimony to the 
+          far-reaching contribution that one man's towering intellect, 
+          persistence and scientific vision can make to human peace and 
+          progress."
+          <br><br>          
+          -- Indian Prime Minister Manmohan Singh</i></p>
+      </section>
+      <footer>
+        <h3>
+          <b>If you have time, you should read more about this incredible
+          human being on his 
+            <a id="tribute-link" target="_blank" 
+               href="https://en.wikipedia.org/wiki/Norman_Borlaug">
+              Wikipedia entry
+            </a>
+          .</b>
+        </h3>
+      </footer>
+    </main>
+  </body>
+</html>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { padding: 30px 10px; }
+
+main {
+  padding: 25px;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+header { text-align: center; }
+
+#img-div {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #FFF;
+}
+
+#image {
+  display: block;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#tribute-info {
+  width:60%;
+  height: auto;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+li b::after {
+  content: ' - ';
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Sheet</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>
+          <span class="flex">
+            <span>AcmeWidgetCorp</span>
+            <span>Balance Sheet</span>
+          </span>
+        </h1>
+        <div id="years" aria-hidden="true">
+          <span class="year">2019</span>
+          <span class="year">2020</span>
+          <span class="year">2021</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption>Assets</caption>
+            <thead>
+              <tr>
+                <td></td>
+                <th><span class="sr-only year">2019</span></th>
+                <th><span class="sr-only year">2020</span></th>
+                <th class="current"><span class="sr-only year">2021</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="data">
+                <th>Cash <span class="description">This is the cash we currently have on hand.</span></th>
+                <td>$25</td>
+                <td>$30</td>
+                <td class="current">$28</td>
+              </tr>
+              <tr class="data">
+                <th>Checking <span class="description">Our primary transactional account.</span></th>
+                <td>$54</td>
+                <td>$56</td>
+                <td class="current">$53</td>
+              </tr>
+              <tr class="data">
+                <th>Savings <span class="description">Funds set aside for emergencies.</span></th>
+                <td>$500</td>
+                <td>$650</td>
+                <td class="current">$728</td>
+              </tr>
+              <tr class="total">
+                <th>Total <span class="sr-only">Assets</span></th>
+                <td>$579</td>
+                <td>$736</td>
+                <td class="current">$809</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <caption>Liabilities</caption>
+            <thead>
+              <tr>
+              <td></td>
+              <th><span class="sr-only">2019</span></th>
+              <th><span class="sr-only">2020</span></th>
+              <th><span class="sr-only">2021</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="data">
+                <th>Loans <span class="description">The outstanding balance on our startup loan.</span></th>
+                <td>$500</td>
+                <td>$250</td>
+                <td class="current">$0</td>
+              </tr>
+              <tr class="data">
+                <th>Expenses <span class="description">Annual anticipated expenses, such as payroll.</span></th>
+                <td>$200</td>
+                <td>$300</td>
+                <td class="current">$400</td>
+              </tr>
+              <tr class="data">
+                <th>Credit <span class="description">The outstanding balance on our credit card.</span></th>
+                <td>$50</td>
+                <td>$50</td>
+                <td class="current">$75</td>
+              </tr>
+              <tr class="total">
+                <th>Total <span class="sr-only">Liabilities</span></th>
+                <td>$750</td>
+                <td>$600</td>
+                <td class="current">$475</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <caption>Net Worth</caption>
+            <thead>
+              <tr>
+              <td></td>
+              <th><span class="sr-only">2019</span></th>
+              <th><span class="sr-only">2020</span></th>
+              <th><span class="sr-only">2021</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="total">
+                <th>Total <span class="sr-only">Net Worth</span></th>
+                <td>$-171</td>
+                <td>$136</td>
+                <td class="current">$334</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+span[class~="sr-only"] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #0a0a23;
+}
+
+h1 {
+  max-width: 37.25rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+h1 .flex span:first-of-type {
+  font-size: 0.7em;
+}
+
+h1 .flex span:last-of-type {
+  font-size: 1.2em;
+}
+
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 2px solid #d0d0d5;
+}
+
+#years {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  background: #0a0a23;
+  color: #fff;
+  z-index: 999;
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+  margin: 0 -2px;
+}
+
+#years span[class] {
+  font-weight: bold;
+  width: 4.5rem;
+  text-align: right;
+}
+
+.table-wrap {
+  padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+table caption {
+  color: #356eaf;
+  font-size: 1.3em;
+  font-weight: normal;
+  position: absolute;
+  top: -2.25rem;
+  left: 0.5rem;
+}
+
+tbody td {
+  width: 100vw;
+  min-width: 4rem;
+  max-width: 4rem;
+}
+
+tbody th {
+  width: calc(100% - 12rem);
+}
+
+tr[class="total"] {
+  border-bottom: 4px double #0a0a23;
+  font-weight: bold;
+}
+
+tr[class="total"] th {
+  text-align: left;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td {
+  text-align: right;
+  padding: 0 0.25rem;
+}
+
+tr.total td:nth-of-type(3) {
+  padding-right: 0.5rem;
+}
+
+tr.total:hover {
+  background-color: #99c9ff;
+}
+
+td.current {
+  font-style: italic;
+}
+
+tr.data {
+  background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+  text-align: left;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+tr.data th .description {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  padding: 1rem 0 0.75rem;
+  margin-right: -13.5rem;
+}
+
+tr.data td {
+  vertical-align: top;
+  padding: 0.3rem 0.25rem 0;
+  text-align: right;
+}
+
+tr.data td:last-of-type {
+  padding-right: 0.5rem;
+}
+
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Picasso Painting</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  </head>
+  <body>
+    <div id="back-wall"></div>
+    <div class="characters">
+      <div id="offwhite-character">
+        <div id="white-hat"></div>
+        <div id="black-mask">
+          <div class="eyes left"></div>
+          <div class="eyes right"></div>
+        </div>
+        <div id="gray-instrument">
+          <div class="black-dot"></div>
+          <div class="black-dot"></div>
+          <div class="black-dot"></div>
+          <div class="black-dot"></div>
+          <div class="black-dot"></div>
+        </div>
+        <div id="tan-table"></div>
+      </div>
+      <div id="black-character">
+        <div id="black-hat"></div>
+        <div id="gray-mask">
+          <div class="eyes left"></div>
+          <div class="eyes right"></div>
+        </div>
+        <div id="white-paper">
+          <i class="fas fa-music"></i>
+          <i class="fas fa-music"></i>
+          <i class="fas fa-music"></i>
+          <i class="fas fa-music"></i>
+        </div>
+      </div>
+      <div class="blue" id="blue-left"></div>
+      <div class="blue" id="blue-right"></div>
+      <div id="orange-character">
+        <div id="black-round-hat"></div>
+        <div id="eyes-div">
+          <div class="eyes left"></div>
+          <div class="eyes right"></div>
+        </div>
+        <div id="triangles">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+        <div id="guitar">
+          <div class="guitar" id="guitar-left">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="guitar" id="guitar-right">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div id="guitar-neck"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+body {
+  background-color: rgb(184, 132, 46);
+}
+
+#back-wall {
+  background-color: #8B4513;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#offwhite-character {
+  width: 300px;
+  height: 550px;
+  background-color: GhostWhite;
+  position: absolute;
+  top: 20%;
+  left: 17.5%;
+}
+
+#white-hat {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 120px 140px 180px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: GhostWhite;
+  border-left-color: transparent;
+  position: absolute;
+  top: -140px;
+  left: 0;
+}
+
+#black-mask {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(45, 31, 19);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#gray-instrument {
+  width: 15%;
+  height: 40%;
+  background-color: rgb(167, 162, 117);
+  position: absolute;
+  top: 50px;
+  left: 125px;
+  z-index: 1;
+}
+
+.black-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(45, 31, 19);
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 65%;
+}
+
+#tan-table {
+  width: 450px;
+  height: 140px;
+  background-color: #D2691E;
+  position: absolute;
+  top: 275px;
+  left: 15px;
+  z-index: 1;
+}
+
+#black-character {
+  width: 300px;
+  height: 500px;
+  background-color: rgb(45, 31, 19);
+  position: absolute;
+  top: 30%;
+  left: 59%;
+}
+
+#black-hat {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 150px 0 0 300px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: rgb(45, 31, 19);
+  position: absolute;
+  top: -150px;
+  left: 0;
+}
+
+#gray-mask {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(167, 162, 117);
+  position: absolute;
+  top: -10px;
+  left: 70px;
+}
+
+#white-paper {
+  width: 400px;
+  height: 100px;
+  background-color: GhostWhite;
+  position: absolute;
+  top: 250px;
+  left: -150px;
+  z-index: 1;
+}
+
+.fa-music {
+  display: inline-block;
+  margin-top: 8%;
+  margin-left: 13%;
+}
+
+.blue {
+  background-color: #1E90FF;
+}
+
+#blue-left {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+#blue-right {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+#orange-character {
+  width: 250px;
+  height: 550px;
+  background-color: rgb(240, 78, 42);
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+
+#black-round-hat {
+  width: 180px;
+  height: 150px;
+  background-color: rgb(45, 31, 19);
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+  left: 5px;
+  z-index: -1;
+}
+
+#eyes-div {
+  width: 180px;
+  height: 50px;
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  z-index: 3;
+}
+
+#triangles {
+  width: 250px;
+  height: 550px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 42px 45px 45px 0;
+  border-top-color: transparent;
+  border-right-color: Gold; /* yellow */
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: inline-block;
+}
+
+#guitar {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  z-index: 3;
+}
+
+.guitar {
+  width: 150px;
+  height: 120px;
+  background-color: Goldenrod;
+  border-radius: 50%;
+}
+
+#guitar-left {
+  position: absolute;
+  left: 0px;
+}
+
+#guitar-right {
+  position: absolute;
+  left: 100px;
+}
+
+.fa-bars {
+  display: block;
+  margin-top: 30%;
+  margin-left: 40%;
+}
+
+#guitar-neck {
+  width: 200px;
+  height: 30px;
+  background-color: #D2691E;
+  position: absolute;
+  top: 45px;
+  left: 200px;
+  z-index: 3;
+}
+
+.eyes {
+  width: 35px;
+  height: 20px;
+  background-color: #8B4513;
+  border-radius: 20px 50%;
+}
+
+.right {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
+.left {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+.fas {
+  font-size: 30px;
+}
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Piano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div id="piano">
+      <img class="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo" />
+      <div class="keys">
+        <div class="key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+        <div class="key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+
+        <div class="key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+        <div class="key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+
+        <div class="key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+        <div class="key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+        <div class="key black--key"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+#piano {
+  background-color: #00471b;
+  width: 992px;
+  height: 290px;
+  margin: 80px auto;
+  padding: 90px 20px 0 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.keys {
+  background-color: #040404;
+  width: 949px;
+  height: 180px;
+  padding-left: 2px;
+  overflow: hidden;
+}
+
+.key {
+  background-color: #ffffff;
+  position: relative;
+  width: 41px;
+  height: 175px;
+  margin: 2px;
+  float: left;
+  border-radius: 0 0 3px 3px;
+}
+
+.key.black--key::after {
+  background-color: #1d1e22;
+  content: "";
+  position: absolute;
+  left: -18px;
+  width: 32px;
+  height: 100px;
+  border-radius: 0 0 3px 3px;
+}
+
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 23px;
+}
+
+@media (max-width: 768px) {
+  #piano {
+    width: 358px;
+  }
+
+  .keys {
+    width: 318px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  #piano {
+    width: 675px;
+  }
+
+  .keys {
+    width: 633px;
+  }
+}
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="UTF-8">
+    <title>City Skyline</title>
+    <link href="styles.css" rel="stylesheet" />   
+  </head>
+
+  <body>
+    <div class="background-buildings sky">
+      <div></div>
+      <div></div>
+      <div class="bb1 building-wrap">
+        <div class="bb1a bb1-window"></div>
+        <div class="bb1b bb1-window"></div>
+        <div class="bb1c bb1-window"></div>
+        <div class="bb1d"></div>
+      </div>
+      <div class="bb2">
+        <div class="bb2a"></div>
+        <div class="bb2b"></div>
+      </div>
+      <div class="bb3"></div>
+      <div></div>
+      <div class="bb4 building-wrap">
+        <div class="bb4a"></div>
+        <div class="bb4b"></div>
+        <div class="bb4c window-wrap">
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="foreground-buildings">
+      <div></div>
+      <div></div>
+      <div class="fb1 building-wrap">
+        <div class="fb1a"></div>
+        <div class="fb1b"></div>
+        <div class="fb1c"></div>
+      </div>
+      <div class="fb2">
+        <div class="fb2a"></div>
+        <div class="fb2b window-wrap">
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+        </div>
+      </div>
+      <div></div>
+      <div class="fb3 building-wrap">
+        <div class="fb3a window-wrap">
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+        </div>
+        <div class="fb3b"></div>
+        <div class="fb3a"></div>
+        <div class="fb3b"></div>
+      </div>
+      <div class="fb4">
+        <div class="fb4a"></div>
+        <div class="fb4b">
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+        </div>
+      </div>
+      <div class="fb5"></div>
+      <div class="fb6"></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
+
+:root {
+  --building-color1: #aa80ff;
+  --building-color2: #66cc99;
+  --building-color3: #cc6699;
+  --building-color4: #538cc6;
+  --window-color1: #bb99ff;
+  --window-color2: #8cd9b3;
+  --window-color3: #d98cb3;
+  --window-color4: #8cb3d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.background-buildings, .foreground-buildings {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+}
+
+.building-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sky {
+  background: radial-gradient(
+      closest-corner circle at 15% 15%,
+      #ffcf33,
+      #ffcf33 20%,
+      #ffff66 21%,
+      #bbeeff 100%
+    );
+}
+
+/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
+.bb1 {
+  width: 10%;
+  height: 70%;
+}
+
+.bb1a {
+  width: 70%;
+}
+  
+.bb1b {
+  width: 80%;
+}
+  
+.bb1c {
+  width: 90%;
+}
+
+.bb1d {
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+      var(--building-color1) 50%,
+      var(--window-color1)
+    );
+}
+
+.bb1-window {
+  height: 10%;
+  background: linear-gradient(
+      var(--building-color1),
+      var(--window-color1)
+    );
+}
+
+.bb2 {
+  width: 10%;
+  height: 50%;
+}
+
+.bb2a {
+  border-bottom: 5vh solid var(--building-color2);
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+}
+
+.bb2b {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 6%,
+      var(--window-color2) 6%,
+      var(--window-color2) 9%
+    );
+}
+
+.bb3 {
+  width: 10%;
+  height: 55%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3),
+      var(--building-color3),
+      var(--window-color3) 15%
+    );
+}
+
+.bb4 {
+  width: 11%;
+  height: 58%;
+}
+
+.bb4a {
+  width: 3%;
+  height: 10%;
+  background-color: var(--building-color4);
+}
+
+.bb4b {
+  width: 80%;
+  height: 5%;
+  background-color: var(--building-color4);
+}
+  
+.bb4c {
+  width: 100%;
+  height: 85%;
+  background-color: var(--building-color4);
+}
+
+.bb4-window {
+  width: 18%;
+  height: 90%;
+  background-color: var(--window-color4);
+}
+
+/* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
+.fb1 {
+  width: 10%;
+  height: 60%;
+}
+
+.fb1a {
+  border-bottom: 7vh solid var(--building-color4);
+  border-left: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+}
+
+.fb1b {
+  width: 60%;
+  height: 10%;
+  background-color: var(--building-color4);
+}
+  
+.fb1c {
+  width: 100%;
+  height: 80%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color4),
+      var(--building-color4) 10%,
+      transparent 10%,
+      transparent 15%
+    ),
+    repeating-linear-gradient(
+      var(--building-color4),
+      var(--building-color4) 10%,
+      var(--window-color4) 10%,
+      var(--window-color4) 90%
+    );
+}
+
+.fb2 {
+  width: 10%;
+  height: 40%;
+}
+
+.fb2a {
+  width: 100%;
+  border-bottom: 10vh solid var(--building-color3);
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+}
+
+.fb2b {
+  width: 100%;
+  height: 75%;
+  background-color: var(--building-color3);
+}
+
+.fb2-window {
+  width: 22%;
+  height: 100%;
+  background-color: var(--window-color3);
+}
+
+.fb3 {
+  width: 10%;
+  height: 35%;
+}
+  
+.fb3a {
+  width: 80%;
+  height: 15%;
+  background-color: var(--building-color1);
+}
+  
+.fb3b {
+  width: 100%;
+  height: 35%;
+  background-color: var(--building-color1);
+}
+
+.fb3-window {
+  width: 25%;
+  height: 80%;
+  background-color: var(--window-color1);
+}
+
+.fb4 {
+  width: 8%;
+  height: 45%;
+  position: relative;
+  left: 10%;
+}
+
+.fb4a {
+  border-top: 5vh solid transparent;
+  border-left: 8vw solid var(--building-color1);
+}
+
+.fb4b {
+  width: 100%;
+  height: 89%;
+  background-color: var(--building-color1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fb4-window {
+  width: 30%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: var(--window-color1);
+  margin: 10%;
+}
+
+.fb5 {
+  width: 10%;
+  height: 33%;
+  position: relative;
+  right: 10%;
+  background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 5%,
+      transparent 5%,
+      transparent 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2),
+      var(--building-color2) 12%,
+      var(--window-color2) 12%,
+      var(--window-color2) 44%
+    );
+}
+
+.fb6 {
+  width: 9%;
+  height: 38%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3),
+      var(--building-color3) 10%,
+      transparent 10%,
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      var(--building-color3),
+      var(--building-color3) 10%,
+      var(--window-color3) 10%,
+      var(--window-color3) 30%
+    );
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --building-color1: #000;
+    --building-color2: #000;
+    --building-color3: #000;
+    --building-color4: #000;
+  }
+  .sky {
+    background: radial-gradient(
+        closest-corner circle at 15% 15%,
+        #ccc,
+        #ccc 20%,
+        #445 21%,
+        #223 100%
+      );
+  }
+}
+    
+
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="heading">
+        <header class="hero">
+          <img
+            src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+            alt="freecodecamp logo"
+            loading="lazy"
+            class="hero-img"
+          />
+          <h1 class="hero-title">OUR NEW CURRICULUM</h1>
+          <p class="hero-subtitle">
+            Our efforts to restructure our curriculum with a more project-based
+            focus
+          </p>
+        </header>
+        <div class="author">
+          <p class="author-name">
+            By
+            <a href="https://freecodecamp.org" target="_blank" rel="noreferrer"
+              >freeCodeCamp</a
+            >
+          </p>
+          <p class="publish-date">March 7, 2019</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/freecodecamp/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/freecodecamp/">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/freecodecamp">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/school/free-code-camp/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/freecodecamp">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+      <section class="text">
+        <p class="first-paragraph">
+          Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
+        </p>
+        <p>
+          After years - years - of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! A picture of this! This is what makes time travel possible: the flux capacitor!
+        </p>
+        <p>
+          It wasn't as dramatic as Doc's revelation in Back to the Future. It
+          just occurred to me while I was going for a run. The revelation: the entire curriculum should be a series of projects. Instead of individual coding challenges, we'll just have projects, each with their own seamless series of tests. Each test gives you just enough information to figure out how to get it to pass. (And you can view hints if that isn't enough.)
+        </p>
+        <blockquote>
+          <hr />
+          <p class="quote">
+            The entire curriculum should be a series of projects
+          </p>
+          <hr />
+        </blockquote>
+        <p>
+          No more walls of explanatory text. No more walls of tests. Just one
+          test at a time, as you build up a working project. Over the course of passing thousands of tests, you build up projects and your own understanding of coding fundamentals. There is no transition between lessons and projects, because the lessons themselves are baked into projects. And there's plenty of repetition to help you retain everything because - hey - building projects in real life has plenty of repetition.
+        </p>
+        <p>
+          The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from "reading mode" to "coding mode".
+        </p>
+        <p>
+          Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
+        </p>
+      </section>
+      <section class="text text-with-images">
+        <article class="brief-history">
+          <h3 class="list-title">A Brief History</h3>
+          <p>Of the Curriculum</p>
+          <ul class="lists">
+            <li>
+              <h4 class="list-subtitle">V1 - 2014</h4>
+              <p>
+                We launched freeCodeCamp with a simple list of 15 resources,
+                including Harvard's CS50 and Stanford's Database Class.
+              </p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V2 - 2015</h4>
+              <p>We added interactive algorithm challenges.</p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V3 - 2015</h4>
+              <p>
+                We added our own HTML+CSS challenges (before we'd been relying on
+                General Assembly's Dash course for these).
+              </p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V4 - 2016</h4>
+              <p>
+                We expanded the curriculum to 3 certifications, including Front
+                End, Back End, and Data Visualization. They each had 10 required
+                projects, but only the Front End section had its own challenges.
+                For the other certs, we were still using external resources like
+                Node School.
+              </p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V5 - 2017</h4>
+              <p>We added the back end and data visualization challenges.</p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V6 - 2018</h4>
+              <p>
+                We launched 6 new certifications to replace our old ones. This was
+                the biggest curriculum improvement to date.
+              </p>
+            </li>
+          </ul>
+        </article>
+        <aside class="image-wrapper">
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+            alt="image of the quote machine project"
+            loading="lazy"
+            class="image-1"
+            width="600"
+            height="400"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
+            alt="image of a calculator project"
+            loading="lazy"
+            class="image-2"
+            width="400"
+            height="400"
+          />
+          <blockquote class="image-quote">
+            <hr />
+            <p class="quote">
+              The millions of people who are learning to code through freeCodeCamp
+              will have an even better resource to help them learn these
+              fundamentals.
+            </p>
+            <hr />
+          </blockquote>
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg"
+            alt="four people working on code"
+            loading="lazy"
+            class="image-3"
+            width="600"
+            height="400"
+          />
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baskervville', serif;
+  color: linen;
+  background-color: rgb(20, 30, 40);
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: linen;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  row-gap: 3rem;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.heading {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+}
+
+.text {
+  grid-column: 2 / 3;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  column-width: 25rem;
+  text-align: justify;
+}
+
+.hero {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.hero-title {
+  text-align: center;
+  color: orangered;
+  font-size: 8rem;
+}
+
+.hero-subtitle {
+  font-size: 2.4rem;
+  color: orangered;
+  text-align: center;
+}
+
+.author {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.author-name a:hover {
+  background-color: #306203;
+}
+
+.publish-date {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icons {
+  display: grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+}
+
+.first-paragraph::first-letter {
+  font-size: 6rem;
+  color: orangered;
+  float: left;
+  margin-right: 1rem;
+}
+
+.quote {
+  color: #00beef;
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.quote::before {
+  content: '" ';
+}
+
+.quote::after {
+  content: ' "';
+}
+
+.text-with-images {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.lists {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.lists li {
+  margin-bottom: 1.5rem;
+}
+
+.list-title, .list-subtitle {
+  color: #00beef;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 2rem;
+  place-items: center;
+}
+
+.image-1, .image-3 {
+  grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+  
+  .hero-subtitle,
+  .author,
+  .quote,
+  .list-title {
+    font-size: 1.8rem;
+  }
+  
+  .social-icons {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  } 
+}
+
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ferris Wheel</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="wheel">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+
+      <div class="cabin"></div>
+      <div class="cabin"></div>
+      <div class="cabin"></div>
+      <div class="cabin"></div>
+      <div class="cabin"></div>
+      <div class="cabin"></div>
+    </div>
+  </body>
+</html>
+
+
+.wheel {
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-left: 50px;
+  position: absolute;
+  height: 55vw;
+  width: 55vw;
+  max-width: 500px;
+  max-height: 500px;
+  animation-name: wheel;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.line {
+  background-color: black;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+}
+
+.line:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+.line:nth-of-type(3) {
+  transform: rotate(120deg);
+}
+.line:nth-of-type(4) {
+  transform: rotate(180deg);
+}
+.line:nth-of-type(5) {
+  transform: rotate(240deg);
+}
+.line:nth-of-type(6) {
+  transform: rotate(300deg);
+}
+
+.cabin {
+  background-color: red;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  border: 2px solid;
+  transform-origin: 50% 0%;
+  animation: cabins 10s ease-in-out infinite;
+}
+
+.cabin:nth-of-type(1) {
+  right: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(2) {
+  right: 17%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(3) {
+  right: 67%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(4) {
+  left: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(5) {
+  left: 17%;
+  top: 7%;
+}
+.cabin:nth-of-type(6) {
+  right: 17%;
+  top: 7%;
+}
+
+@keyframes wheel {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+}
+
+@keyframes cabins {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Penguin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="left-mountain"></div>
+    <div class="back-mountain"></div>
+    <div class="sun"></div>
+    <div class="penguin">
+      <div class="penguin-head">
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="chin"></div>
+        <div class="eye left">
+          <div class="eye-lid"></div>
+        </div>
+        <div class="eye right">
+          <div class="eye-lid"></div>
+        </div>
+        <div class="blush left"></div>
+        <div class="blush right"></div>
+        <div class="beak top"></div>
+        <div class="beak bottom"></div>
+      </div>
+      <div class="shirt">
+        <div>??</div>
+        <p>I CSS</p>
+      </div> 
+      <div class="penguin-body">
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+        <div class="foot left"></div>
+        <div class="foot right"></div>
+      </div>
+    </div>
+
+    <div class="ground"></div>
+  </body>
+</html>
+
+
+:root {
+  --penguin-face: white;
+  --penguin-picorna: orange;
+  --penguin-skin: gray;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-mountain {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+  position: absolute;
+  transform: skew(0deg, 44deg);
+  z-index: 2;
+  margin-top: 100px;
+}
+
+.back-mountain {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+  position: absolute;
+  z-index: 1;
+  transform: rotate(45deg);
+  left: 110px;
+  top: 225px;
+}
+
+.sun {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  position: absolute;
+  border-radius: 50%;
+  top: -75px;
+  right: -75px;
+}
+
+.penguin {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 75px;
+  z-index: 4;
+  position: relative;
+  transition: transform 1s ease-in-out 0ms;
+}
+
+.penguin * {
+  position: absolute;
+}
+
+.penguin:active {
+  transform: scale(1.5);
+  cursor: not-allowed;
+}
+
+.penguin-head {
+  width: 50%;
+  height: 45%;
+  background: linear-gradient(
+    45deg,
+    var(--penguin-skin),
+    rgb(239, 240, 228)
+  );
+  border-radius: 70% 70% 65% 65%;
+  top: 10%;
+  left: 25%;
+  z-index: 1;
+}
+
+.face {
+  width: 60%;
+  height: 70%;
+  background-color: var(--penguin-face);
+  border-radius: 70% 70% 60% 60%;
+  top: 15%;
+}
+
+.face.left {
+  left: 5%;
+}
+
+.face.right {
+  right: 5%;
+}
+
+.chin {
+  width: 90%;
+  height: 70%;
+  background-color: var(--penguin-face);
+  top: 25%;
+  left: 5%;
+  border-radius: 70% 70% 100% 100%;
+}
+
+.eye {
+  width: 15%;
+  height: 17%;
+  background-color: black;
+  top: 45%;
+  border-radius: 50%;
+}
+
+.eye.left {
+  left: 25%;
+}
+
+.eye.right {
+  right: 25%;
+}
+
+.eye-lid {
+  width: 150%;
+  height: 100%;
+  background-color: var(--penguin-face);
+  top: 25%;
+  left: -23%;
+  border-radius: 50%;
+}
+
+.blush {
+  width: 15%;
+  height: 10%;
+  background-color: pink;
+  top: 65%;
+  border-radius: 50%;
+}
+
+.blush.left {
+  left: 15%;
+}
+
+.blush.right {
+  right: 15%;
+}
+
+.beak {
+  height: 10%;
+  background-color: var(--penguin-picorna);
+  border-radius: 50%;
+}
+
+.beak.top {
+  width: 20%;
+  top: 60%;
+  left: 40%;
+}
+
+.beak.bottom {
+  width: 16%;
+  top: 65%;
+  left: 42%;
+}
+
+.shirt {
+  font: bold 25px Helvetica, sans-serif;
+  top: 165px;
+  left: 127.5px;
+  z-index: 1;
+  color: #6a6969;
+}
+
+.shirt div {
+  font-weight:  initial;
+  top: 22.5px;
+  left: 12px;
+}
+
+.penguin-body {
+  width: 53%;
+  height: 45%;
+  background: linear-gradient(
+    45deg,
+    rgb(134, 133, 133) 0%,
+    rgb(234, 231, 231) 25%,
+    white 67%
+  );
+  border-radius: 80% 80% 100% 100%;
+  top: 40%;
+  left: 23.5%;
+}
+
+.penguin-body::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: var(--penguin-skin);
+  top: 10%;
+  left: 25%;
+  border-radius: 0% 0% 100% 100%;
+  opacity: 70%;
+}
+
+.arm {
+  width: 30%;
+  height: 60%;
+  background: linear-gradient(
+    90deg,
+    var(--penguin-skin),
+    rgb(209, 210, 199)
+  );
+  border-radius: 30% 30% 30% 120%;
+  z-index: -1;
+}
+
+.arm.left {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left; 
+  transform: rotate(130deg) scaleX(-1);
+  animation: 3s linear infinite wave;
+}
+
+.arm.right {
+  top: 0%;
+  right: -5%;
+  transform: rotate(-45deg);
+}
+
+@keyframes wave {
+  10% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  20% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+  30% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  40% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+}
+
+.foot {
+  width:  15%;
+  height: 30%;
+  background-color: var(--penguin-picorna);
+  top: 85%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.foot.left {
+  left: 25%;
+  transform: rotate(80deg);
+}
+
+.foot.right {
+  right: 25%;
+  transform: rotate(-80deg);
+}
+
+.ground {
+  width: 100vw;
+  height: calc(100vh - 300px);
+  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+  z-index: 3;
+  position: absolute;
+  margin-top: -58px;
+}
