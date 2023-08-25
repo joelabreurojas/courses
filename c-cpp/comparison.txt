@@ -1,0 +1,32 @@
+// C sintax
+int calculate(int bottom, int top)
+{
+    if (top > bottom)
+    {
+        int sum = 0;
+
+        for (int numer = bottom; number <= top; number++)
+        {
+            if (number % 2 == 0)
+            {
+                sum += number;
+            }
+        }
+
+        return sum;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+// C++ sintax
+namespace stdviews = std::views;
+
+int calculate(int bottom, int top) {
+    return top <= bottom ? 0 :
+        ranges::accumulate(
+            stdviews::iota(bottom, top + 1) |
+            stdviews::filter([](auto n) { return n % 2 == 0; }), 0);
+}
