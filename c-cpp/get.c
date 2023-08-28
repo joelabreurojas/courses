@@ -15,16 +15,17 @@ int main(void)
 char *get_string(char *message)
 {
     int c = 0, len = 0;
-    char *str = NULL, *aux_str = NULL;
+    char *aux, *str = NULL;
 
     printf("%s", message);
 
     str = malloc(len + 1);
-    while ((c = getchar()) != '\n') {
+    while ((c = getchar()) != '\n')
+    {
         str[len] = (char)c;
         len++;
-        aux_str = realloc(str, len + 1);
-        str = aux_str;
+        aux = realloc(str, len + 1);
+        str = aux;
     }
     str[len] = '\0';
 
