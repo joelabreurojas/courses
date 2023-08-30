@@ -1,18 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *get_string(char *);
-
-int main(void)
-{
-    char *input = get_string("Input: ");
-    printf("%s", input);
-    free(input);
-
-    return 0;
-}
-
-char *get_string(char *message)
+extern char *get_string(char *message)
 {
     int c = 0, len = 0;
     char *aux, *str = NULL;
