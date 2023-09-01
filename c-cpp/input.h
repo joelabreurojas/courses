@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern char *get_string(char *message)
+static char *aux = NULL;
+static char *str = NULL;
+static size_t len = 0;
+
+static char *get_string(char *message)
 {
-    int c = 0, len = 0;
-    char *aux, *str = NULL;
+    int c = 0;
 
     printf("%s", message);
 
     str = malloc(len + 1);
-    while ((c = getchar()) != '\n')
+    while ((c = getchar()) != '\n' && c != EOF)
     {
         str[len] = (char)c;
         len++;
