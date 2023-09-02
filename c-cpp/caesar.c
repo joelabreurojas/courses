@@ -24,7 +24,6 @@ int main(int argc, char* argv[])
     for (int i = 0; i < strlen(text); i++)
         putchar(rotate_letter(text[i], key));
 
-    free(text);
     putchar('\n');
 
     return 0;
