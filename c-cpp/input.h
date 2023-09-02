@@ -23,3 +23,14 @@ static char *get_string(char *message)
 
     return str;
 }
+
+#if defined (__GNUC__)
+    static void __attribute__((destructor)) teardown();
+#else
+    #error Default compiler / version is not recognized.
+#endif
+
+static void teardown(void)
+{
+    free(str);
+}
