@@ -22,7 +22,9 @@ int main(int argc, char* argv[])
     printf("ciphertext: ");
 
     for (int i = 0; i < strlen(text); i++)
+    {
         putchar(rotate_letter(text[i], key));
+    }
 
     putchar('\n');
 
@@ -32,13 +34,17 @@ int main(int argc, char* argv[])
 char rotate_letter(char letter, int gap)
 {
     if (!islower(letter) && !isupper(letter))
+    {
         return letter;
+    }
 
     char aux = (islower(letter)) ? 'a' : 'A';
     int size = (int)letter - aux + gap;
     
     while (size >= LETTERS_RANGE)
+    {
         size -= LETTERS_RANGE;
+    }
 
 
     return size + aux;

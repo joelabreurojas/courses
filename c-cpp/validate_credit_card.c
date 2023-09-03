@@ -48,7 +48,9 @@ int *arrchar_to_arrint(char *arr)
     for (int i = 0; i < LENGTH; i++)
     {
         if (isdigit(arr[i]))
+        {
             numbers[i] = arr[i] - '0';
+        }
     }
 
     return numbers;
@@ -59,7 +61,9 @@ bool luhn_algorithm(int *arr)
     int aux = 0; 
 
     for (int i = 0; i < LENGTH; i += 2)
+    {
         aux += (arr[i] * 2) + arr[i + 1];
+    }
 
     return (aux % 10 == 0);
 }

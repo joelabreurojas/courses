@@ -21,11 +21,17 @@ int main(void)
     scores[1] = get_score(words[1]);
 
     if (scores[0] > scores[1])
+    {
         printf("Player 1 wins!");
+    }
     else if (scores[0] < scores[1])
+    {
         printf("Player 2 wins!");
+    }
     else
+    {
         printf("Tie!");
+    }
     
     return 0;
 }
@@ -35,7 +41,9 @@ int get_score(char word[])
     int score = 0;
 
     for (int i = 0; i < strlen(word); i++)
+    {
         score += SCORE_BOARD[toupper(word[i]) - 'A'];
+    }
 
     return score;
 }
