@@ -3,12 +3,12 @@
 
 #include "input.h"
 
-static char *aux = NULL;
-static char *str = NULL;
-static size_t len = 0;
+char *str = NULL;
+size_t len = 0;
 
 char *get_string(char *message)
 {
+    char *aux = NULL;
     int c = 0;
 
     printf("%s", message);
