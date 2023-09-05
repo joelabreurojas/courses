@@ -13,12 +13,12 @@ char *get_string(char *message)
 
     printf("%s", message);
 
-    str = malloc(len + 1);
+    str = malloc(1);
     while ((c = getchar()) != '\n' && c != EOF)
     {
         str[len] = (char)c;
         len++;
-        aux = realloc(str, len + 1);
+        aux = realloc(str, len);
         str = aux;
     }
     str[len] = '\0';
