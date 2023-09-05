@@ -14,7 +14,7 @@ char *get_string(char *message)
     printf("%s", message);
 
     str = malloc(1);
-    while ((c = getchar()) != '\n' && c != EOF)
+    while ((c = fgetc()) != '\n' && c != EOF)
     {
         str[len] = (char)c;
         len++;
