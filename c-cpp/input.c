@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,8 +22,14 @@ char *get_string(char *message)
 
     while ((c = fgetc(stdin)) != '\n' && c != EOF)
     {
+        if (len + 1 > SIZE_MAX)
+        {
+            return NULL;
+        }
+
         str[len] = (char)c;
         len++;
+
         aux = realloc(str, len);
         if (!aux)
         {
@@ -30,6 +37,7 @@ char *get_string(char *message)
         }
         str = aux;
     }
+
     str[len] = '\0';
 
     return str;
