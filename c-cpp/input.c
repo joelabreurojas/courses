@@ -4,12 +4,12 @@
 #include "input.h"
 
 char *str = NULL;
-size_t len = 0;
 
 char *get_string(char *message)
 {
     char *aux = NULL;
     int c = 0;
+    size_t len = 0;
 
     printf("%s", message);
 
