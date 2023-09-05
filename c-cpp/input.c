@@ -44,7 +44,7 @@ char *get_string(char *message)
 }
 
 #if defined (__GNUC__)
-    static void __attribute__((destructor)) cleanup();
+    void __attribute__((destructor)) cleanup();
 #else
     #error Default compiler / version is not recognized.
 #endif
