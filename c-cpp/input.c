@@ -14,11 +14,20 @@ char *get_string(char *message)
     printf("%s", message);
 
     str = malloc(1);
+    if (!str)
+    {
+        return NULL;
+    }
+
     while ((c = fgetc(stdin)) != '\n' && c != EOF)
     {
         str[len] = (char)c;
         len++;
         aux = realloc(str, len);
+        if (!aux)
+        {
+            return NULL;
+        }
         str = aux;
     }
     str[len] = '\0';
