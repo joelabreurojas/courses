@@ -27,12 +27,12 @@ char *get_string(char *message)
 }
 
 #if defined (__GNUC__)
-    static void __attribute__((destructor)) teardown();
+    static void __attribute__((destructor)) cleanup();
 #else
     #error Default compiler / version is not recognized.
 #endif
 
-void teardown(void)
+void cleanup(void)
 {
     free(str);
 }
