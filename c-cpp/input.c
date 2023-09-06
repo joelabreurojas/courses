@@ -1,5 +1,6 @@
 #include <float.h>
 #include <limits.h>
+#include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -9,8 +10,7 @@
 
 char *str = NULL;
 
-
-char get_char(char *message)
+char get_char(const char *message)
 {
     while(true)
     {
@@ -28,7 +28,7 @@ char get_char(char *message)
     }
 }
 
-double get_double(char *message)
+double get_double(const char *message)
 {
     while(true)
     {
@@ -48,7 +48,7 @@ double get_double(char *message)
     }
 }
 
-float get_float(char *message)
+float get_float(const char *message)
 {
     while(true)
     {
@@ -68,7 +68,7 @@ float get_float(char *message)
     }
 }
 
-int get_int(char *message)
+int get_int(const char *message)
 {
     while(true)
     {
@@ -88,7 +88,7 @@ int get_int(char *message)
     }
 }
 
-long get_long(char *message)
+long get_long(const char *message)
 {
     while(true)
     {
@@ -108,7 +108,7 @@ long get_long(char *message)
     }
 }
 
-char *get_string(char *message)
+char *get_string(const char *message)
 {
     char *aux = NULL;
     int c = 0;
