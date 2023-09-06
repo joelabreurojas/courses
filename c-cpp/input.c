@@ -12,100 +12,92 @@ char *str = NULL;
 
 char get_char(const char *message)
 {
-    while(true)
+    char c, i, *input = NULL;
+
+    do
     {
-        char *input = get_string(message);
+        input = get_string(message);
         if (!input)
         {
             return CHAR_MAX;
         }
-
-        char c, i;
-        if (sscanf(input, "%c%c", &c, &i) == 1)
-        {
-            return c;
-        }
     }
+    while(sscanf(input, "%c%c", &c, &i) == 0);
+
+    return c;
 }
 
 double get_double(const char *message)
 {
-    while(true)
+    char c, *input = NULL;
+    double d = 0;
+
+    do
     {
-        char *input = get_string(message);
+        input = get_string(message);
         if (!input)
         {
             return DBL_MAX;
         }
-
-        char c;
-        double d = 0;
-
-        if (sscanf(input, "%lg%c", &d, &c) == 1)
-        {
-            return d;
-        }
     }
+    while(sscanf(input, "%lg%c", &d, &c) == 0);
+
+    return d;
 }
 
 float get_float(const char *message)
 {
-    while(true)
+    char c, *input = NULL;;
+    float f = 0;
+
+    do
     {
-        char *input = get_string(message);
+        input = get_string(message);
         if (!input)
         {
             return FLT_MAX;
         }
-
-        char c;
-        float f = 0;
-
-        if (sscanf(input, "%g%c", &f, &c) == 1)
-        {
-            return f;
-        }
     }
+    while(sscanf(input, "%g%c", &f, &c) == 0);
+
+    return f;
 }
 
 int get_int(const char *message)
 {
-    while(true)
+    char c, *input = NULL;
+    int i = 0;
+
+    do
     {
-        char *input = get_string(message);
+        input = get_string(message);
         if (!input)
         {
             return INT_MAX;
         }
-
-        char c;
-        int i = 0;
-
-        if (sscanf(input, "%i%c", &i, &c) == 1)
-        {
-            return i;
-        }
     }
+    while(sscanf(input, "%i%c", &i, &c) == 0);
+
+    return i;
 }
 
 long get_long(const char *message)
 {
-    while(true)
+    char c, *input = NULL;
+    long l = 0;
+
+    do
     {
-        char *input = get_string(message);
+        input = get_string(message);
         if (!input)
         {
             return LONG_MAX;
         }
 
-        char c;
-        long l = 0;
-
-        if (sscanf(input, "%li%c", &l, &c) == 1)
-        {
-            return l;
-        }
     }
+    while(sscanf(input, "%li%c", &l, &c) == 0);
+
+    return l;
 }
 
 char *get_string(const char *message)
