@@ -1,7 +1,5 @@
 #include <float.h>
 #include <limits.h>
-#include <stdarg.h>
-#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +20,7 @@ char get_char(const char *message)
             return CHAR_MAX;
         }
     }
-    while (!sscanf(input, "%c%c", &c, &i));
+    while (sscanf(input, "%c%c", &c, &i) != 1);
 
     return c;
 }
@@ -40,7 +38,7 @@ double get_double(const char *message)
             return DBL_MAX;
         }
     }
-    while (!sscanf(input, "%lg%c", &d, &c));
+    while (sscanf(input, "%lg%c", &d, &c) != 1);
 
     return d;
 }
@@ -58,7 +56,7 @@ float get_float(const char *message)
             return FLT_MAX;
         }
     }
-    while (!sscanf(input, "%g%c", &f, &c));
+    while (sscanf(input, "%g%c", &f, &c) != 1);
 
     return f;
 }
@@ -76,7 +74,7 @@ int get_int(const char *message)
             return INT_MAX;
         }
     }
-    while (!sscanf(input, "%i%c", &i, &c));
+    while (sscanf(input, "%i%c", &i, &c) != 1);
 
     return i;
 }
@@ -95,7 +93,7 @@ long get_long(const char *message)
         }
 
     }
-    while (!sscanf(input, "%li%c", &l, &c));
+    while (sscanf(input, "%li%c", &l, &c) != 1);
 
     return l;
 }
