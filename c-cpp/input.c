@@ -22,7 +22,7 @@ char get_char(const char *message)
             return CHAR_MAX;
         }
     }
-    while(sscanf(input, "%c%c", &c, &i) == 0);
+    while (!sscanf(input, "%c%c", &c, &i));
 
     return c;
 }
@@ -40,7 +40,7 @@ double get_double(const char *message)
             return DBL_MAX;
         }
     }
-    while(sscanf(input, "%lg%c", &d, &c) == 0);
+    while (!sscanf(input, "%lg%c", &d, &c));
 
     return d;
 }
@@ -58,7 +58,7 @@ float get_float(const char *message)
             return FLT_MAX;
         }
     }
-    while(sscanf(input, "%g%c", &f, &c) == 0);
+    while (!sscanf(input, "%g%c", &f, &c));
 
     return f;
 }
@@ -76,7 +76,7 @@ int get_int(const char *message)
             return INT_MAX;
         }
     }
-    while(sscanf(input, "%i%c", &i, &c) == 0);
+    while (!sscanf(input, "%i%c", &i, &c));
 
     return i;
 }
@@ -95,7 +95,7 @@ long get_long(const char *message)
         }
 
     }
-    while(sscanf(input, "%li%c", &l, &c) == 0);
+    while (!sscanf(input, "%li%c", &l, &c));
 
     return l;
 }
