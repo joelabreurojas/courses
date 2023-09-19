@@ -39,7 +39,10 @@ int count_letters(char *text)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        count = (isalpha(text[i])) ? count + 1 : count;
+        if (isalpha(text[i]))
+        {
+            count++;
+        }
     }
 
     return count;
@@ -51,7 +54,10 @@ int count_words(char *text)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        count = (isspace(text[i])) ? count + 1 : count;
+        if (isspace(text[i]))
+        {
+            count++;
+        }
     }
 
     return count;
@@ -63,7 +69,10 @@ int count_sentences(char *text)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        count = (strchr(".?!", text[i])) ? count + 1 : count;
+        if (strchr(".?!", text[i]))
+        {
+            count++;
+        }
     }
 
     return count;
