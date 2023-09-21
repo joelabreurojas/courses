@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: Check the sorted list have a huge different between other cases.
+
+sort2 uses: Merge
+
+How do you know?: The time executed is pretty similar and the lower.
+
+sort3 uses: Selection
+
+How do you know?: The time execute is pretty similar and isn't the lower.
