@@ -8,7 +8,7 @@ void print_blocks(int, bool);
 int main(void)
 {
     int size = get_size();
-    for(int rows = 0; rows < size; rows++)
+    for (int rows = 0; rows < size; rows++)
     {
         print_spaces(rows, size);
         printf("#");
@@ -32,7 +32,7 @@ int get_size(void)
 
 void print_spaces(int rows, int size)
 {
-    for (int spaces = size - rows; spaces > 0; spaces--)
+    for (int spaces = rows - size + 1; spaces < 0; spaces++)
     {
         printf(" ");
     }
