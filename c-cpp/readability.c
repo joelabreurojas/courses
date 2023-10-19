@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
     int words = count_words(text);
     float averrage_letters = (float)count_letters(text) / words * 100;
     float averrage_sentences = (float)count_sentences(text) / words * 100;
-    int coleman_index = round(0.0588 * averrage_letters - 0.296 * averrage_sentences - 15.8);
+    int coleman_index = round(
+        0.0588 * averrage_letters - 0.296 * averrage_sentences - 15.8
+    );
 
     if (coleman_index <= 1)
     {

@@ -26,7 +26,7 @@ int get_size(void)
         printf("Size (3-9): ");
         scanf("%i", &size);
     }
-    while(size < 1 || size > 9);
+    while (size < 1 || size > 9);
     return size;
 }
 
