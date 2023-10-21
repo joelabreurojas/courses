@@ -1,4 +1,7 @@
-c-cpp/input.*
-c-cpp/test.c
-static/
+# Auxiliar library
+input.*
+
+# Testing workspace
+test*
 *.out
+static/
