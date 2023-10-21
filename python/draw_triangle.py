@@ -2,9 +2,14 @@ def main() -> None:
     size: int = get_size()
 
     for row in range(size):
-        print_spaces(row, size)
-        print('#', end='')
-        print_blocks(row, True)
+
+        # Draw spaces
+        print(' ' * (size - row - 1), end='')
+
+        # Draw blocks
+        print('#' * row, end='')
+        print('#', end='')  # This is the center block
+        print('#' * row)
 
 
 def get_size() -> int:
@@ -17,24 +22,6 @@ def get_size() -> int:
             print('Not an integer')
 
     return size
-
-
-def print_spaces(row: int, size: int) -> None:
-    spaces: int = row - size + 1
-
-    while spaces < 0:
-        print(' ', end='')
-        spaces += 1
-
-    print_blocks(row, False)
-
-
-def print_blocks(row: int, jump: bool) -> None:
-    for _ in range(row):
-        print('#', end='')
-
-    if jump:
-        print()
 
 
 if __name__ == '__main__':
