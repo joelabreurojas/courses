@@ -3,67 +3,59 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "input.h"
+
 #define LENGTH 16
 
-int *arrchar_to_arrint(char *);
 char *get_input(void);
-bool luhn_algorithm(int *);
+bool luhn_algorithm(char *);
 
 int main(void)
 {
-    char *input = get_input();
-    int *card_numbers = arrchar_to_arrint(input);
+    char *card_numbers = get_input();
 
-    if (luhn_algorithm(card_numbers))
+    if (luhn_algorithm(card_numbers) != 0)
     {
-        printf("VALID\n");
-        return 0;
+        printf("INVALID\n");
+        return 1;
     }
 
-    printf("INVALID\n");
-    return 1;
+    printf("VALID\n");
+    return 0;
 }
 
 char *get_input(void)
 {
-    static char input[LENGTH];
-    int input_len = 0;
+    char *input = NULL;
+    int count = 0;
 
     do
     {
-        printf("Number (16 digits): ");
-        scanf("%s", input);
-        printf("%s", input);
-        printf("%li", strlen(input));
+        input = get_string("Number (16 digits): ");
+
+        for (int i = 0; i < LENGTH && isdigit(input[i]); i++)
+        {
+            count++;
+        }
     }
-    while (strlen(input) != LENGTH);
+    while (strlen(input) != count && count != LENGTH);
 
     return input;
 }
 
-int *arrchar_to_arrint(char *arr)
+bool luhn_algorithm(char *card)
 {
-    static int numbers[LENGTH];
+    int result = 0; 
 
-    for (int i = 0; i < LENGTH; i++)
+    for (int i = 0, aux; i < LENGTH; i += 2)
     {
-        if (isdigit(arr[i]))
+        if ((aux = (card[i] - '0') * 2) > 9)
         {
-            numbers[i] = arr[i] - '0';
+            aux -= 9;
         }
+
+        result += aux + card[i + 1] - '0';
     }
 
-    return numbers;
-}
-
-bool luhn_algorithm(int *arr)
-{
-    int aux = 0; 
-
-    for (int i = 0; i < LENGTH; i += 2)
-    {
-        aux += (arr[i] * 2) + arr[i + 1];
-    }
-
-    return (aux % 10 == 0);
+    return (result % 10);
 }
