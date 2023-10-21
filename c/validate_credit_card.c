@@ -14,7 +14,7 @@ int main(void)
 {
     char *card_numbers = get_input();
 
-    if (luhn_algorithm(card_numbers) != 0)
+    if (!(luhn_algorithm(card_numbers)))
     {
         printf("INVALID\n");
         return 1;
@@ -45,17 +45,17 @@ char *get_input(void)
 
 bool luhn_algorithm(char *card)
 {
-    int result = 0; 
+    int addition = 0; 
 
-    for (int i = 0, aux; i < LENGTH; i += 2)
+    for (int i = 0, product = 0; i < LENGTH; i += 2)
     {
-        if ((aux = (card[i] - '0') * 2) > 9)
+        if ((product = (card[i] - '0') * 2) > 9)
         {
-            aux -= 9;
+            product -= 9;
         }
 
-        result += aux + card[i + 1] - '0';
+        addition += product + card[i + 1] - '0';
     }
 
-    return (result % 10);
+    return (!(addition % 10));
 }
