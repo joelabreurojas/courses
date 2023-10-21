@@ -35,7 +35,7 @@ char *get_input(void)
 
         for (int i = 0; i < LENGTH && isdigit(input[i]); i++)
         {
-            count++;
+            count = i;
         }
     }
     while (strlen(input) != count && count != LENGTH);
