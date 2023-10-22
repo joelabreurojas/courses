@@ -33,10 +33,8 @@ char *get_input(void)
     {
         input = get_string("Number (16 digits): ");
 
-        for (int i = 0; i < LENGTH && isdigit(input[i]); i++)
-        {
-            count = i;
-        }
+        for (count = 0; count < LENGTH && isdigit(input[count]); count++)
+        ;
     }
     while (strlen(input) != count && count != LENGTH);
 
