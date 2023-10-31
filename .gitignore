@@ -1,7 +1,15 @@
 # Auxiliar library
 input.*
 
+# NodeJS stuff
+/node_modules
+
 # Testing workspace
 test*
 *.out
 static/
+
+# Environment
+/env
+.env
+.env.test
