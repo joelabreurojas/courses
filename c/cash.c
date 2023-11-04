@@ -1,30 +1,37 @@
+#include <stdio.h>
+
 #include "input.h"
 
-int calculate_quarters(int cents);
+const int RANGE = 4;
+const int COINS[] = {25, 10, 5, 1};
 
-int main(void)
-{
-    int cents = 0;
-    do
-    {
-        cents = get_int("Change owed:");
-    }
-    while (cents < 0);
+int calculate_cash(int coin, int money);
 
-    int quarters = calculate_quarters(cents);
+int main(void) {
+  int money = 0;
+  do {
+    money = get_int("Money to coins: ");
+  } while (money < 0);
 
-    cents = cents - (quarters * 25);
+  int cash = calculate_cash(25, money);
+
+  printf("%i", cash);
 }
 
-int calculate_quarters(int cents)
-{
-    int quarters = 0;
+int calculate_cash(int coin, int money) {
+  int cash = 0, i = 0;
 
-    while (cents >= 25)
-    {
-        quarters++;
-        cents = cents - 25;
-    }
+  for (; i < RANGE && coin != COINS[i]; i++)
+    ;
 
-    return quarters;
+  while(money >= COINS[i]) {
+    cash++;
+    money -= COINS[i];
+  }
+
+  if (money) {
+    cash += calculate_cash(COINS[i + 1], money);
+  }
+
+  return cash;
 }
