@@ -3,11 +3,13 @@ def main() -> None:
 
     for i in range(1, number + 1):
         if i % 3 == 0:
-            print('Fizz')
-        elif i % 5 == 0:
-            print('Buzz')
-        else:
-            print(i)
+            print('Fizz', end='')
+        if i % 5 == 0:
+            print('Buzz', end='')
+        if (i % 3) != 0 != (i % 5):
+            print(i, end='')
+
+        print()
 
 
 def get_number() -> int:
