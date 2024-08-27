@@ -1,1 +1,1 @@
-while text := (input"> "): print(text)
+while text := (input("> ")): print(text)
