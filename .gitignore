@@ -5,7 +5,7 @@ input.*
 /node_modules
 
 # Testing workspace
-test*
+tests/
 *.out
 static/
 
