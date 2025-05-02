@@ -1,3 +1,6 @@
+# Temp files
+*.tmp
+
 # Auxiliar library
 input.*
 
