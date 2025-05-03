@@ -18,7 +18,7 @@ def main() -> None:
 
     name_entities: dict = extract_ner(text, nlp)
 
-    relationships: str = extract_relationships(nlp(text))
+    relationships: str = extract_relationships(doc)
 
     display_results(text, doc, parts_of_speech, name_entities, relationships)
 
@@ -77,7 +77,7 @@ def extract_relationships(doc: Doc) -> str:
 
     for index, token in enumerate(doc):
         if token.dep_ != "compound":
-            relationships[index] += " -"
+            relationships[index] += f" ({token.dep_}) -"
 
     sentence: str = " ".join(relationships)
 
