@@ -6,45 +6,34 @@ from spacy.tokens.doc import Doc
 
 
 def main() -> None:
-    text: str = "Google Inc. is headquartered in Mountain View, California."
-
     nlp: Language = spacy.load(name="en_core_web_sm")
 
-    formatted_text: str = preprocess_text(text, nlp)
-
-    doc: Doc = nlp(formatted_text)
-
-    parts_of_speech: dict = extract_pos(doc)
-
-    name_entities: dict = extract_ner(text, nlp)
-
-    relationships: str = extract_relationships(doc)
-
-    display_results(text, doc, parts_of_speech, name_entities, relationships)
-
-
-def preprocess_text(text: str, nlp: Language) -> str:
-    """
-    Formats the given text by removing stop words, punctuation, and spaces using
-    the given spaCy model with lemmatization.
-    """
+    text: str = "Elon Musk founded SpaceX in Hawthorne, California."
 
     doc: Doc = nlp(text)
 
+    formatted_doc: Doc = preprocess_doc(doc, nlp)
+
+    parts_of_speech: dict = extract_pos(formatted_doc)
+
+    name_entities: dict = extract_ner(doc)
+
+    relationships: list = extract_svo(doc)
+
+    display_results(text, formatted_doc, parts_of_speech, name_entities, relationships)
+
+
+def preprocess_doc(doc: Doc, nlp: Language) -> Doc:
     tokens: list[str] = [
         token.lemma_
         for token in doc
         if not token.is_stop and not token.is_punct and not token.is_space
     ]
 
-    return " ".join(tokens)
+    return nlp(" ".join(tokens))
 
 
 def extract_pos(doc: Doc) -> dict:
-    """
-    Extract the parts of speech from the given spaCy document.
-    """
-
     parts_of_speech: dict = defaultdict(list)
 
     for token in doc:
@@ -53,13 +42,7 @@ def extract_pos(doc: Doc) -> dict:
     return parts_of_speech
 
 
-def extract_ner(text: str, nlp: Language) -> dict:
-    """
-    Extracts the named entities from the given text using the given the spaCy model.
-    """
-
-    doc: Doc = nlp(text)
-
+def extract_ner(doc: Doc) -> dict:
     named_entities: dict = defaultdict(list)
 
     for ent in doc.ents:
@@ -86,10 +69,14 @@ def extract_relationships(doc: Doc) -> str:
 
 
 def display_results(
-    text: str, doc: Doc, parts_of_speech: dict, name_entities: dict, relationships: str
+    text: str,
+    formmatted_doc: Doc,
+    parts_of_speech: dict,
+    name_entities: dict,
+    relationships: list,
 ):
     print("Original Text:", text)
-    print("Preprocessed Text:", doc)
+    print("Preprocessed Text:", formmatted_doc)
 
     print("Parts of Speech:")
     for pos, tokens in parts_of_speech.items():
