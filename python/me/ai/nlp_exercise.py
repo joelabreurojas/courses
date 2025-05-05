@@ -3,6 +3,7 @@ from collections import defaultdict
 import spacy
 from spacy.language import Language
 from spacy.tokens.doc import Doc
+from spacy.tokens.token import Token
 
 
 def main() -> None:
@@ -51,21 +52,25 @@ def extract_ner(doc: Doc) -> dict:
     return named_entities
 
 
-def extract_relationships(doc: Doc) -> str:
-    """
-    Extracts the relationships between tokens in the given spaCy document.
-    """
+def extract_svo(doc: Doc) -> list:
+    svo_list: list = []
 
-    relationships: list = [token.text for token in doc]
+    for token in doc:
+        # if the token is a subject
+        if token.dep_ == "nsubj":
+            subject: str = " ".join([t.text for t in token.subtree])
+            subject += f" ({token.dep_})"
 
-    for index, token in enumerate(doc):
-        if token.dep_ != "compound":
-            relationships[index] += f" ({token.dep_}) -"
+            potential_verb: Token = token.head
 
-    sentence: str = " ".join(relationships)
+            # if the head of the token is a verb
+            if potential_verb.pos_ == "VERB":
+                verb: str = f"{potential_verb.lemma_} ({potential_verb.dep_})"
 
-    # Remove suffix if the last token isn't compound
-    return sentence.removesuffix(" -")
+                if object_ := _find_object(potential_verb):
+                    svo_list.append(f"{subject} - {verb} - {object_}")
+
+    return svo_list
 
 
 def display_results(
@@ -86,7 +91,20 @@ def display_results(
     for ent, tokens in name_entities.items():
         print(f"  {ent}: {', '.join(tokens)}")
 
-    print("Relationships:", relationships)
+    print("Relationships:")
+    for relationship in relationships:
+        print(f"  {relationship}")
+
+
+def _find_object(verb: Token) -> str | None:
+    for child in verb.children:
+        # if the child is a direct, indirect or prepositional object
+        if child.dep_ in ["dobj", "iobj", "pobj"]:
+            object_: str = " ".join([t.text for t in child.subtree])
+
+            return f"{object_} ({child.dep_})"
+
+    return None
 
 
 if __name__ == "__main__":
